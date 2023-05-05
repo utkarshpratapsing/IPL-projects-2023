@@ -1,0 +1,64 @@
+A3 description has already been uploaded, and the goal of the assignment is CodeGen.
+From the AST of the input program, your task is to generate assembly code.
+The best approach to CodeGen is in incremental phases by increasing the complexity of AST node to Instruction Opcode mapping.
+
+To aid your approach to the assignment, we have reduced the complexity and variety of instructions you would have to use.
+First and foremost, you may ignore FLOAT entirely. The only scalar you need to handle is INT.
+Second, the testing would not be the diff between your generated assembly code and GCC's output, but instead, it would be based on the correctness of your assembly code. This will be tested using several "printf"s present in testcases.
+
+Following are the suggested phases and corresponding weights:
+
+Phase
+
+Description
+
+Weightage
+
+P0
+
+Handle valid printf calls
+
+0
+
+P1
+
+Assignment statements involving only scalars (INT)
+
+7
+
+P2
+
+Selection and Iterative statements (IF, FOR, WHILE)
+
+5
+
+P3
+
+Function definitions and function calls
+
+5
+
+P4
+
+Structures and Field access operator
+
+3
+
+P5
+
+Pointers and related operations
+
+5
+
+P6
+
+Arrays and related operations
+
+5
+
+
+We'll try to provide parsers for you to understand the type of testcases you need to handle for different phases. This might take some time, so try to make progress based on the above description.
+The evaluation script will also be shared along with this.
+
+The weightage of all phases is 30, as is A3's weightage. Therefore, there won't be vivas for A3 unless required.
+Since the submission deadline for A3 is after EndSems, there will be no resubmissions, and whatever marks you received using the evaluation script will be final, so make sure you test your final submission with the scripts provided.
